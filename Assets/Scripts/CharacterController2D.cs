@@ -38,11 +38,11 @@ public class CharacterController2D : MonoBehaviour
                 if (colliders[i].gameObject != gameObject)
                 {
                     m_Grounded = true;
-                    Debug.Log(colliders[i].gameObject.name);
+                    if (GameManager.IsDebug) { Debug.Log("colliders[i].gameObject.name = "+colliders[i].gameObject.name); }
                 }
             }
         }
-        Debug.Log(m_Grounded);
+        if (GameManager.IsDebug) { Debug.Log("m_Grounded = " + m_Grounded); }
 	}
 
 
